@@ -64,3 +64,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+// Contato
+function enviarWhatsApp(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const mensagem = document.getElementById('mensagem').value;
+
+    // Montar texto antes da codificação
+    const textoOriginal = `Olá, Chef Neemias!\n\nMeu nome é *${nome}*.\n${mensagem}`;
+    
+    // Codifica o texto inteiro
+    const textoFinal = encodeURIComponent(textoOriginal);
+
+    // Link universal
+    const urlWhatsApp = `https://wa.me/5582996509948?text=${textoFinal}`;
+
+    // Verifica se é celular
+    if (/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        window.location.href = `whatsapp://send?phone=5582996509948&text=${textoFinal}`;
+    } else {
+        window.open(urlWhatsApp, '_blank');
+    }
+}
