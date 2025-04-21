@@ -89,3 +89,73 @@ function enviarWhatsApp(event) {
         window.open(urlWhatsApp, '_blank');
     }
 }
+
+
+// Função para carregar os depoimentos
+async function loadTestimonials() {
+    const slider = document.getElementById('testimonial-slider');
+    
+    try {
+        // Usando um serviço proxy para contornar CORS (exemplo com AllOrigins)
+        const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://restaurantguru.com.br/Tempero-do-Chef-Maceio-2')}`);
+        const data = await response.json();
+        
+        // Criar um elemento DOM temporário para parsear o HTML
+        const parser = new DOMParser();
+        const htmlDoc = parser.parseFromString(data.contents, 'text/html');
+        
+        // Extrair as avaliações (ajuste os seletores conforme necessário)
+        const reviews = htmlDoc.querySelectorAll('.review-item');
+        
+        if (reviews.length === 0) {
+            slider.innerHTML = '<div class="no-reviews">Não foi possível carregar as avaliações no momento.</div>';
+            return;
+        }
+        
+        // Limpar o slider
+        slider.innerHTML = '';
+        
+        // Processar cada avaliação (limitando a 3 para exemplo)
+        reviews.slice(0, 3).forEach(review => {
+            const author = review.querySelector('.user-name')?.textContent || 'Anônimo';
+            const text = review.querySelector('.review-text')?.textContent || 'Ótimo restaurante!';
+            const rating = review.querySelector('.rating-star')?.style.width || '0%'; // Ex: "80%"
+            const avatar = review.querySelector('.user-avatar img')?.src || `https://randomuser.me/api/portraits/${Math.random() > 0.5 ? 'men' : 'women'}/${Math.floor(Math.random() * 100)}.jpg`;
+            
+            // Converter rating de porcentagem para estrelas (ex: 80% = 4 estrelas)
+            const starCount = Math.round(parseInt(rating) / 20);
+            
+            // Criar elemento de slide
+            const slide = document.createElement('div');
+            slide.className = 'testimonial-slide';
+            slide.innerHTML = `
+                <div class="testimonial-avatar">
+                    <img src="${avatar}" alt="${author}">
+                </div>
+                <p class="testimonial-text">"${text}"</p>
+                <h4 class="testimonial-author">${author}</h4>
+                <div class="testimonial-rating">
+                    ${'<i class="fas fa-star"></i>'.repeat(starCount)}
+                    ${'<i class="far fa-star"></i>'.repeat(5 - starCount)}
+                </div>
+            `;
+            
+            slider.appendChild(slide);
+        });
+        
+    } catch (error) {
+        console.error('Erro ao carregar avaliações:', error);
+        slider.innerHTML = `
+            <div class="error-message">
+                Não foi possível carregar as avaliações em tempo real. Aqui estão algumas avaliações de exemplo.
+            </div>
+            ${slider.innerHTML} <!-- Mantém as avaliações padrão caso existam -->
+        `;
+    }
+}
+
+// Carregar as avaliações quando a página carregar
+document.addEventListener('DOMContentLoaded', loadTestimonials);
+
+// Opcional: Atualizar a cada 30 minutos
+setInterval(loadTestimonials, 30 * 60 * 1000);
