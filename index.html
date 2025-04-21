@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempero do Chef Neemias - Gastronomia de Excelência</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-img">TN</div>
+                <div class="logo-text">
+                    <h1>Tempero do Chef</h1>
+                    <p>Neemias</p>
+                </div>
+            </a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#menu">Cardápio</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Experiência Gastronômica Única</h1>
+            <p>O Chef Neemias tem o prazer de preparar um almoço delicioso para você. Descubra os prazeres da boa comida.</p>
+            <div class="btn-group">
+                <a href="#menu" class="btn">Ver Cardápio</a>
+                <a href="#contact" class="btn btn-outline">Reservas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="section-title">
+            <h2>Sobre Nós</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Chef Neemias">
+            </div>
+            <div class="about-text">
+                <h3>Nossa História</h3>
+                <p>O Tempero do Chef Neemias nasceu da paixão pela gastronomia e pelo desejo de compartilhar momentos especiais através da comida. Localizado no coração de Maceió, nosso restaurante oferece uma experiência única que combina tradição e inovação.</p>
+                <p>Com mais de 10 anos de experiência, o Chef Neemias traz para sua mesa pratos elaborados com ingredientes frescos e selecionados, preparados com técnicas refinadas e muito amor.</p>
+                <p>Nosso ambiente acolhedor e atendimento personalizado garantem que cada visita seja memorável. Venha descobrir por que somos um dos restaurantes mais amados da cidade!</p>
+                <p class="signature">- Chef Neemias</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="section menu" id="menu">
+        <div class="section-title">
+            <h2>Nosso Cardápio</h2>
+        </div>
+        <div class="menu-tabs">
+            <button class="tab-btn active" data-category="all">Todos</button>
+            <button class="tab-btn" data-category="lasanha">Lasanhas</button>
+            <button class="tab-btn" data-category="salada">Saladas</button>
+            <button class="tab-btn" data-category="principal">Pratos Principais</button>
+            <button class="tab-btn" data-category="sobremesa">Sobremesas</button>
+        </div>
+        <div class="menu-items">
+            <!-- Lasanha 1 -->
+            <div class="menu-item" data-category="lasanha">
+                <div class="menu-item-img">
+                    <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80" alt="Lasanha à Bolonhesa">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Lasanha à Bolonhesa</h3>
+                        <span class="menu-item-price">R$ 42,90</span>
+                    </div>
+                    <p class="menu-item-desc">Camadas de massa fresca intercaladas com molho bolonhesa caseiro, queijo mussarela e parmesão, gratinada no forno.</p>
+                </div>
+            </div>
+            
+            <!-- Lasanha 2 -->
+            <div class="menu-item" data-category="lasanha">
+                <div class="menu-item-img">
+                    <img src="https://images.unsplash.com/photo-1629115916087-7e8c114a24ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Lasanha de Frango">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Lasanha de Frango</h3>
+                        <span class="menu-item-price">R$ 39,90</span>
+                    </div>
+                    <p class="menu-item-desc">Deliciosa lasanha com frango desfiado, catupiry, milho e ervilhas, coberta com molho branco especial.</p>
+                </div>
+            </div>
+            
+            <!-- Salada 1 -->
+            <div class="menu-item" data-category="salada">
+                <div class="menu-item-img">
+                    <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Salada Caesar">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Salada Caesar</h3>
+                        <span class="menu-item-price">R$ 28,90</span>
+                    </div>
+                    <p class="menu-item-desc">Mix de folhas, croutons, parmesão e nosso famoso molho caesar. Opção com frango grelhado +R$8,00.</p>
+                </div>
+            </div>
+            
+            <!-- Salada 2 -->
+            <div class="menu-item" data-category="salada">
+                <div class="menu-item-img">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Salada Tropical">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Salada Tropical</h3>
+                        <span class="menu-item-price">R$ 32,90</span>
+                    </div>
+                    <p class="menu-item-desc">Mix de folhas, manga, abacate, tomate cereja, nozes e molho de mel e mostarda.</p>
+                </div>
+            </div>
+            
+            <!-- Prato Principal 1 -->
+            <div class="menu-item" data-category="principal">
+                <div class="menu-item-img">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80" alt="Filé Mignon">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Filé Mignon ao Molho Madeira</h3>
+                        <span class="menu-item-price">R$ 68,90</span>
+                    </div>
+                    <p class="menu-item-desc">Suculento filé mignon grelhado, servido com molho madeira, purê de batatas e legumes grelhados.</p>
+                </div>
+            </div>
+            
+            <!-- Prato Principal 2 -->
+            <div class="menu-item" data-category="principal">
+                <div class="menu-item-img">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80" alt="Risoto de Camarão">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Risoto de Camarão</h3>
+                        <span class="menu-item-price">R$ 59,90</span>
+                    </div>
+                    <p class="menu-item-desc">Cremoso risoto preparado com camarões frescos, ervas finas e um toque de limão siciliano.</p>
+                </div>
+            </div>
+            
+            <!-- Sobremesa 1 -->
+            <div class="menu-item" data-category="sobremesa">
+                <div class="menu-item-img">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80" alt="Petit Gateau">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Petit Gateau</h3>
+                        <span class="menu-item-price">R$ 22,90</span>
+                    </div>
+                    <p class="menu-item-desc">Mini bolo de chocolate com recheio cremoso, acompanhado de sorvete de baunilha e calda de frutas vermelhas.</p>
+                </div>
+            </div>
+            
+            <!-- Sobremesa 2 -->
+            <div class="menu-item" data-category="sobremesa">
+                <div class="menu-item-img">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1557&q=80" alt="Cheesecake de Morango">
+                </div>
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Cheesecake de Morango</h3>
+                        <span class="menu-item-price">R$ 19,90</span>
+                    </div>
+                    <p class="menu-item-desc">Torta de cheesecake cremosa com base de biscoito, coberta com geleia de morango caseira.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery" id="gallery">
+        <div class="section-title">
+            <h2>Nossa Galeria</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Prato do Chef">
+                <div class="gallery-item-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Ambiente do Restaurante">
+                <div class="gallery-item-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Chef Neemias trabalhando">
+                <div class="gallery-item-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80" alt="Lasanha especial">
+                <div class="gallery-item-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80" alt="Filé mignon">
+                <div class="gallery-item-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80" alt="Risoto de camarão">
+                <div class="gallery-item-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80" alt="Sobremesa">
+                <div class="gallery-item-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1557&q=80" alt="Cheesecake">
+                <div class="gallery-item-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="section-title">
+            <h2>Depoimentos</h2>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonial-slider">
+                <div class="testimonial-slide">
+                    <div class="testimonial-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Cliente 1">
+                    </div>
+                    <p class="testimonial-text">"A melhor lasanha que já comi na vida! O ambiente é acolhedor e o atendimento impecável. Voltarei com certeza!"</p>
+                    <h4 class="testimonial-author">Ana Carolina</h4>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-avatar">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente 2">
+                    </div>
+                    <p class="testimonial-text">"O Chef Neemias superou todas as expectativas. O risoto de camarão é divino e as sobremesas são perfeitas."</p>
+                    <h4 class="testimonial-author">Ricardo Almeida</h4>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-avatar">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Cliente 3">
+                    </div>
+                    <p class="testimonial-text">"Fui com minha família e todos amamos! Serviço excelente, comida deliciosa e preço justo. Recomendo muito!"</p>
+                    <h4 class="testimonial-author">Fernanda Santos</h4>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="section-title">
+            <h2>Contato</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Entre em Contato</h3>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-info-text">
+                        <h4>Endereço</h4>
+                        <p>Av. Dr. Antônio Gomes de Barros, 123<br>Jatiúca, Maceió - AL</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-info-text">
+                        <h4>Telefone</h4>
+                        <p><a href="tel:+558232123456">(82) 3212-3456</a></p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-info-text">
+                        <h4>Email</h4>
+                        <p><a href="mailto:contato@chefneemias.com.br">contato@chefneemias.com.br</a></p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <div class="contact-info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-info-text">
+                        <h4>Horário de Funcionamento</h4>
+                        <p>Terça a Domingo<br>11:30 - 15:00 / 19:00 - 23:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="form-contato">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Seu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="Seu Telefone">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Sua Mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Sobre Nós</h3>
+                <p>O Tempero do Chef Neemias oferece uma experiência gastronômica única, combinando sabores tradicionais com técnicas contemporâneas.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#menu">Cardápio</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Horário</h3>
+                <p>Terça a Domingo</p>
+                <p>Almoço: 11:30 - 15:00</p>
+                <p>Jantar: 19:00 - 23:00</p>
+                <p>Segunda-feira: Fechado</p>
+            </div>
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <p>Assine nossa newsletter para receber novidades e promoções.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Seu Email" class="form-control" required>
+                    <button type="submit" class="submit-btn">Assinar</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Tempero do Chef Neemias. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
