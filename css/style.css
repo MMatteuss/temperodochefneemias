@@ -56,17 +56,23 @@ header.scrolled {
 }
 
 .logo-img {
-    width: 60px;
-    height: 60px;
+    width: 60px; /* Largura fixa para manter o círculo */
+    height: 60px; /* Altura igual à largura para formar um círculo perfeito */
     margin-right: 10px;
-    background-color: var(--vermelho-escuro);
-    border-radius: 50%;
+    background-color: transparent;
+    border-radius: 50%; /* Isso cria o efeito redondo */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do círculo */
+    border: 2px solid var(--dourado); /* Opcional: borda dourada */
+}
+
+.logo-img img {
+    width: 100%; /* Preenche todo o espaço do container redondo */
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorcer */
+    object-position: center; /* Centraliza a imagem */
 }
 
 .logo-text {
