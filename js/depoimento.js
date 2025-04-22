@@ -1,13 +1,13 @@
 // Dados completos dos depoimentos
 const depoimentos = [
-    {
-        nome: "Solange",
-        estrelas: 1,
-        comentario: "Péssimo. Falta de respeito deixar um pedido mais de hora esperando para depois cancelar.",
-        data: "1 mês atrás",
-        foto: "https://randomuser.me/api/portraits/women/68.jpg",
-        detalhes: "Service: 1\nShow replies (1)"
-    },
+    // {
+    //     nome: "Solange",
+    //     estrelas: 1,
+    //     comentario: "Péssimo. Falta de respeito deixar um pedido mais de hora esperando para depois cancelar.",
+    //     data: "1 mês atrás",
+    //     foto: "https://randomuser.me/api/portraits/women/68.jpg",
+    //     detalhes: "Service: 1\nShow replies (1)"
+    // },
     {
         nome: "Israel Moura",
         estrelas: 4,
