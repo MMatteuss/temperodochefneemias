@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 <body>
     <!-- Header -->
@@ -252,18 +253,39 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section class="section testimonials" id="testimonials">
         <div class="section-title">
             <h2>Depoimentos</h2>
+            <br>
+            <p class="section-subtitle">Veja o que nossos clientes dizem</p>
         </div>
         <div class="testimonials-container">
-            <div class="testimonial-slider" id="testimonial-slider">
-                <!-- As avaliações serão inseridas aqui dinamicamente -->
-                <div class="loading-message">Carregando avaliações...</div>
+            <div class="testimonial-slider-container">
+                <div class="testimonial-slider" id="testimonial-slider">
+                    <!-- Depoimentos serão inseridos aqui pelo JavaScript -->
+                    <div class="loading-message">Carregando avaliações...</div>
+                </div>
+                <button class="slider-nav prev" aria-label="Depoimentos anteriores">‹</button>
+                <button class="slider-nav next" aria-label="Próximos depoimentos">›</button>
             </div>
+            <button id="ver-mais-btn" class="btn">
+                <i class="fas fa-comments"></i> Ver todas as avaliações (22)
+            </button>
         </div>
     </section>
+
+    <!-- Modal para todas as avaliações -->
+    <div id="avaliacoes-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-star"></i> Todas as Avaliações</h3>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-testimonials" id="all-testimonials">
+                <!-- Todas as avaliações serão inseridas aqui -->
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section class="section contact" id="contact">
@@ -369,5 +391,6 @@
     </footer>
 
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/depoimento.js"></script>
 </body>
 </html>
